@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        let styles = ["Jazz", "Blues"];
+
+        styles.push("Rock-N-Roll");
+
+
+        //replace middle value with Classics - works for even/odd length arrays. 
+        styles[(Math.floor(styles.length / 2))] = "Classics";
+
+        alert(styles.shift()); //this shows the value that was removed as well
+
+        styles.unshift("Rap", "Reggae"); //both added to front of array
+
+
+
+        alert(styles);
+    </script>
+</body>
+</html>

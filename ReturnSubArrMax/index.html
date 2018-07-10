@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+
+        function getMaxSubSum(arr) {
+            newmax = 0;
+            max = 0;
+            for (let i = 0; i < arr.length; i++) {
+
+                newmax += arr[i];
+                if (newmax < 0) newmax = 0;
+                max = (newmax > max) ? newmax : max;
+            };
+
+            if (max < 0) return 0;
+            else return max;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://en.js.cx/test/libs.js"></script>
+    <script src="test.js"></script>
+</head>
+<body>
+    <script>
+
+        function camelize(str) {
+
+            var tokens = str.split('-')
+
+            var capTokens = tokens.map(
+
+                (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+
+
+            var result = capTokens.join(''); // ['my', 'Long', 'Word'] -> myLongWord
+
+            return result;
+        }
+
+/*   another variation/ function camelize(str) {
+          return str
+            .split('-') // my-long-word -> ['my', 'long', 'word']
+            .map(
+              (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+            ) // ['my', 'long', 'word'] -> ['my', 'Long', 'Word']
+            .join(''); // ['my', 'Long', 'Word'] -> myLongWord
+        return str
+
+        }*/
+    </script>
+</body>
+</html>

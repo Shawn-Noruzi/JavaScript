@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        function sumInput() {
+            let arr = [];
+            let sum = 0;
+
+            while (true) {
+
+                value = prompt("What value would you like to store?", 0);
+
+                if (value == "") break;
+                if (value == null) break;
+                if (!isFinite(value)) break;
+                // can replace with one line with ||'s inbetween but this looks cleaner. 
+
+                arr.push(+value);
+            };
+
+            for (let key = 0; key < arr.length; key++) {
+                sum += arr[key];
+            };
+
+            return sum;
+        }
+
+        alert(sumInput());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://en.js.cx/test/libs.js"></script>
+  <script src="test.js"></script>
+</head>
+<body>
+
+  <script>
+	let salaries = {
+		John: 100,
+		Ann: 160,
+		Pete: 130
+	}
+	
+	function sumOfSalaries (obj) {
+		let sum = 0;
+		for (prop in salaries){
+			sum+=obj[prop];
+			}
+		return sum;
+	}
+	
+	<!-- let sum = 0; -->
+	
+	<!-- for (prop in salaries) { -->
+		<!-- sum += salaries[prop]; -->
+		<!-- } -->
+		
+		<!-- alert(sum); -->
+
+	
+	alert(sumOfSalaries(salaries));
+  </script>
+
+</body>
+</html>
